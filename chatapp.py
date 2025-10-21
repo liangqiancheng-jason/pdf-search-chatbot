@@ -18,7 +18,7 @@ except Exception:  # pragma: no cover
 
 load_dotenv()
 
-DEEPSEEK_API_KEY = "your api key"
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
 DEEPSEEK_API_BASE = os.getenv("DEEPSEEK_API_BASE", "https://api.deepseek.com/v1")
 EMBEDDING_PROVIDER = os.getenv("EMBEDDING_PROVIDER", "huggingface").lower()
 EMBEDDING_MODEL_NAME = os.getenv(
